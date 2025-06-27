@@ -1,0 +1,30 @@
+I have joined the vitual internship of c++ programming from codsoft 
+Task 1 :NUMBER GUESSING GAME
+Create a program that generates a random number and asks the
+user to guess it. Provide feedback on whether the guess is too
+high or too low until the user guesses the correct number.
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int main() {
+    srand(time(0));
+    int numGuess = rand() % 100 + 1;
+    int guess;
+    cout << "*Number Guessing Game*\n";
+    cout << "Think of a number between 1 and 100."<<endl;
+    do {
+        cout << "Enter your guess: ";
+        cin >> guess;
+        if (guess < numGuess) {
+            cout << "Low! Try again.\n";
+        } else if (guess > numGuess) {
+            cout << "High! Try again.\n";
+        } else {
+            cout << "You won the game."<<endl;
+        }
+    } while (guess != numGuess);
+
+    return 0;
+}
