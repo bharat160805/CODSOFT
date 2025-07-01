@@ -25,6 +25,5 @@ int main() {
             cout << "You won the game."<<endl;
         }
     } while (guess != numGuess);
-
     return 0;
 }
